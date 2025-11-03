@@ -80,11 +80,11 @@ El enfoque principal fue **optimizar el rendimiento** utilizando **concurrencia 
 
 ### Tiempos antes de la optimización (baseline)
 
-![alt text](image.png)
+![alt text](Tiempo_sin_optimizar.png)
 
 ### Tiempos después de la optimización
 
-![alt text](image-1.png)
+![alt text](Tiempo_optimizado.png)
 
 ✅ La optimización redujo el tiempo total de **93.03s a 9.64s**, aproximadamente **9.3× más rápido**.
 
