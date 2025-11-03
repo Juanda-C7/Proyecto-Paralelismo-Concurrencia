@@ -14,17 +14,19 @@ El enfoque principal fue **optimizar el rendimiento** utilizando **concurrencia 
 
 ---
 
-## 🧩 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 
 - **requests** → Descarga de imágenes desde la web  
 - **Pillow (PIL)** → Procesamiento de imágenes  
 - **tqdm** → Barra de progreso  
+
+### Para la optimización: 
 - **concurrent.futures** → Concurrencia y paralelismo (`ThreadPoolExecutor` y `ProcessPoolExecutor`)  
 
 ---
 
-## ⚙️ Arquitectura del pipeline
+## Arquitectura del pipeline
 
 - **pokemon.py**
   - **Fase 1: Descarga (I/O-bound)**
@@ -39,7 +41,7 @@ El enfoque principal fue **optimizar el rendimiento** utilizando **concurrencia 
     - `pokemon_processed/` ← Imágenes procesadas
 
 
-## 🔍 División de fases
+## División de fases
 
 ### 1️⃣ Descarga de imágenes (I/O-bound)
 
@@ -59,7 +61,7 @@ El enfoque principal fue **optimizar el rendimiento** utilizando **concurrencia 
 
 ---
 
-## 🧠 Problema y solución
+## Problema y solución
 
 **Problema inicial:**  
 - Script secuencial que descargaba y procesaba las imágenes **una por una**, causando tiempos de ejecución muy largos
@@ -76,7 +78,7 @@ El enfoque principal fue **optimizar el rendimiento** utilizando **concurrencia 
 
 ---
 
-## 📊 Resultados
+## Resultados
 
 ### Tiempos antes de la optimización (baseline)
 
@@ -99,7 +101,7 @@ El enfoque principal fue **optimizar el rendimiento** utilizando **concurrencia 
 | **Total**      | 93.03        | 9.64           | ~9.7× más rápido |
 
 
-## 🚀 Estrategias de optimización aplicadas
+## Estrategias de optimización aplicadas
 
 1. **Descarga concurrente (I/O-bound)**  
    - Uso de `ThreadPoolExecutor` con múltiples hilos.  
